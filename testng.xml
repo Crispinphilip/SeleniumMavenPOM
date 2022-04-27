@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Guru99 Suite" >
+<!--    <suite name="Guru99 Suite" parallel="tests">-->
+
+    <test name="Test1">
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="env" value="QA"/>
+        <groups>
+            <run>
+                <include name = "smoke"/>
+<!--                <include name = "group2"></include>-->
+            </run>
+        </groups>
+
+        <classes>
+            <class name="com.guru99.tests.AddCustomerTests"/>
+            <!--<class name="com.guru99.tests.AddTariffPlansTests"/>-->
+            <class name="com.guru99.tests.AddTariffPlanToCustomerTests"/>
+            <class name="com.guru99.tests.PayBllingTests"/>
+
+        </classes>
+    </test>
+
+<!--    <test name="Test2">-->
+<!--                <parameter name="browserName" value="firefox"></parameter>-->
+<!--                <parameter name="env" value="QA"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="com.guru99.tests.AddCustomerTests"/>-->
+<!--            <class name="com.guru99.tests.AddTariffPlanToCustomerTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
