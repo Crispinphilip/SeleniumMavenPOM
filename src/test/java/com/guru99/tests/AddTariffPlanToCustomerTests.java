@@ -34,7 +34,6 @@ public class AddTariffPlanToCustomerTests extends BaseTest {
 
     @Test(groups = {"smoke", "regression"})
     public void AddTariffPlanToCustomerTest1() {
-
         System.out.println("******************Start of AddTariffPlanToCustomerTest1*************");
         indexPage.clickOnAddTariffPlanToCustomer();
         extentTest.log(Status.PASS, "Clicked on Add Tariff Plan To Customer");
