@@ -2,10 +2,12 @@ package com.guru99.pages;
 
 import com.guru99.utilities.Utility;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.python.modules._json._json;
 
 public class AddTariffPlanToCustomerPage {
     WebDriver driver;
@@ -26,7 +28,9 @@ public class AddTariffPlanToCustomerPage {
             e.printStackTrace();
         }
         if(Utility.isElementDisplayed(driver,customerID)){
-            driver.findElement(customerID).sendKeys(custID);
+            JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+            javascriptExecutor.executeScript("arguments[0].value='arguments[1]';",customerID,custID);
+            //driver.findElement(customerID).sendKeys(custID);
         }
     }
 

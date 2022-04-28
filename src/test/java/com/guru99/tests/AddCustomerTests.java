@@ -33,7 +33,7 @@ public class AddCustomerTests extends BaseTest {
 
     @Test(groups = {"smoke", "regression"})
     public void addCustomerTest1() {
-        System.out.println("****************************Test Case 1**************************");
+        System.out.println("**************************** Start Add Customer Test1 **************************");
         indexPage.clickOnAddCustomer();
         extentTest.log(Status.PASS, "Clicked on Add Customer");
         addCustomerPage.clickOnDoneRadioBtn();
@@ -48,6 +48,7 @@ public class AddCustomerTests extends BaseTest {
         extentTest.log(Status.PASS, "Clicked on Submit button");
         Assert.assertTrue(accessPage.isCustomerIDGenerated(), "Customer ID is not generated");
         accessPage.setCustometIDInGlobalVariable();
+        System.out.println("****************************End of Add customer tEST**************************");
     }
 
 }

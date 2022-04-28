@@ -34,6 +34,8 @@ public class AddTariffPlanToCustomerTests extends BaseTest {
 
     @Test(groups = {"smoke", "regression"})
     public void AddTariffPlanToCustomerTest1() {
+
+        System.out.println("******************Start of AddTariffPlanToCustomerTest1*************");
         indexPage.clickOnAddTariffPlanToCustomer();
         extentTest.log(Status.PASS, "Clicked on Add Tariff Plan To Customer");
         addTariffPlanToCustomerPage.setDataOnCustomerID(Constants.CUSTOMERID);
@@ -42,5 +44,6 @@ public class AddTariffPlanToCustomerTests extends BaseTest {
         addApprovedTariffPlansPage.clickOnAddTariffPlanButton();
         extentTest.log(Status.PASS, "Clicked on Add Tariff Plan button");
         Assert.assertTrue(tariffPlanAssignedPage.isTariffPlanAssigned(), "Tariff Plan to Customer not added");
+        System.out.println("****************** End of AddTariffPlanToCustomerTest1*****************");
     }
 }

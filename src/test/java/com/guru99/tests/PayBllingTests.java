@@ -33,6 +33,8 @@ public class PayBllingTests extends BaseTest {
 
     @Test(groups = {"smoke", "regression"})
     public void PayBllingTest1() {
+
+        System.out.println("*********************** Start ofPayBlling  Test1************************** ");
         indexPage.clickOnpayBilling();
         extentTest.log(Status.PASS, "Clicked On Pay Billing");
         payBillingPage.setDataOnCustomerID(Constants.CUSTOMERID);
@@ -40,5 +42,6 @@ public class PayBllingTests extends BaseTest {
         payBillingPage.clickOnSubmitBtn();
         extentTest.log(Status.PASS, "Clicked on Submit button");
         Assert.assertTrue(payBillingSummary.isPayBillingSummary(), "Tariff Plan to Customer not added");
+        System.out.println("************************ End of PayBllingTest1 **********************");
     }
 }

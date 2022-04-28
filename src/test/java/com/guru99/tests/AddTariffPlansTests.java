@@ -32,7 +32,7 @@ public class AddTariffPlansTests extends BaseTest {
 
     @Test(groups = {"smoke", "regression"})
     public void AddTariffPlansTest1() {
-        System.out.println("****************************Test Case 1**************************");
+        System.out.println("**************************** Start of AddTariffPlansTest1  **************************");
         indexPage.clickOnAddTariffPlan();
         addTariffPlansPage.setDataOnMonthlyRent(Utility.readDataFromProperties("MONTHLYRENT"));
         addTariffPlansPage.setDataOnFreeLocalMins(Utility.readDataFromProperties("FREELOCALMINS"));
@@ -43,13 +43,13 @@ public class AddTariffPlansTests extends BaseTest {
         addTariffPlansPage.setDataOnSmsPerCharges(Utility.readDataFromProperties("SMSPERCHARGE"));
         addTariffPlansPage.clickOnSubmitBtn();
         Assert.assertTrue(addTariffPlanSuccessPage.isTariffPlanAdded(), "Add Tariff Plan to Customer is unsuccessful");
-
+        System.out.println("************** End of AddTariffPlansTest1 ******************");
     }
 
 
     @Test(groups = {"regression"})
     public void AddTariffPlansTest2() {
-        System.out.println("*********************Test case 2****************************");
+        System.out.println("********************* Start of AddTariffPlansTest2****************************");
         indexPage.clickOnAddCustomer();
         addTariffPlansPage.setDataOnMonthlyRent(Utility.readDataFromProperties("MONTHLYRENT"));
         addTariffPlansPage.setDataOnFreeLocalMins(Utility.readDataFromProperties("FREELOCALMINS"));
@@ -60,6 +60,6 @@ public class AddTariffPlansTests extends BaseTest {
         addTariffPlansPage.setDataOnSmsPerCharges(Utility.readDataFromProperties("SMSPERCHARGE"));
         addTariffPlansPage.clickOnSubmitBtn();
         Assert.assertTrue(addTariffPlanSuccessPage.isTariffPlanAdded(), "Add Tariff Plan to Customer is unsuccessful");
-
+        System.out.println( "*********************End of AddTariffPlansTest2***************");
     }
 }
