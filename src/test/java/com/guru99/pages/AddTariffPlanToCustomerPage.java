@@ -29,7 +29,7 @@ public class AddTariffPlanToCustomerPage {
         }
         if(Utility.isElementDisplayed(driver,customerID)){
             JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
-            javascriptExecutor.executeScript("arguments[0].value='arguments[1]';",customerID,custID);
+            javascriptExecutor.executeScript("arguments[0].value=arguments[1];",customerID,custID);
             //driver.findElement(customerID).sendKeys(custID);
         }
     }
